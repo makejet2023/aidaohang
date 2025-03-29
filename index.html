@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFinderHub</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* 头部导航栏 */
+        .header {
+            background: #007bff;
+            color: #fff;
+            padding-top: 20px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+
+        .logo {
+            height: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .nav ul {
+            list-style: none;
+            float: right;
+            margin-top: 10px;
+        }
+
+        .nav li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* 主要内容区域 */
+        .content {
+            padding: 20px 0;
+        }
+
+        .sidebar {
+            float: left;
+            width: 25%;
+            padding-right: 20px;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .tools-list {
+            float: left;
+            width: 75%;
+        }
+
+        .tools-list h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .tool-card {
+            background: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tool-card img {
+            float: left;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        .tool-card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .tool-card p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .tool-card button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .tool-card button:hover {
+            background: #0056b3;
+        }
+
+        /* 页脚 */
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="container">
+            <img src="assets/logo.png" alt="AIFinderHub Logo" class="logo">
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">工具分类</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="content">
+        <div class="container">
+            <!-- 侧边栏 -->
+            <aside class="sidebar">
+                <h3>工具分类</h3>
+                <ul>
+                    <li><a href="#ai-chatbots">AI 聊天机器人</a></li>
+                    <li><a href="#data-processing-tools">数据处理工具</a></li>
+                    <li><a href="#machine-learning-frameworks">机器学习框架</a></li>
+                    <li><a href="#natural-language-processing">自然语言处理</a></li>
+                </ul>
+            </aside>
+
+            <!-- 工具列表 -->
+            <section id="ai-chatbots" class="tools-list">
+                <h2>AI 聊天机器人</h2>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>ChatGPT</h3>
+                    <p>由 OpenAI 开发的强大聊天机器人，能够进行多种对话和任务。</p>
+                    <a href="https://chat.openai.com/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>DialoGPT</h3>
+                    <p>由微软开发的对话系统，支持多轮对话和上下文理解。</p>
+                    <a href="https://microsoft.github.io/DialoGPT/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Replika</h3>
+                    <p>个人化的AI伴侣，提供情感支持和日常对话。</p>
+                    <a href="https://replika.ai/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Woebot</h3>
+                    <p>心理健康聊天机器人，帮助管理焦虑和抑郁情绪。</p>
+                    <a href="https://woebot.io/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>EveTalk</h3>
+                    <p>企业级聊天机器人平台，提供定制化解决方案。</p>
+                    <a href="https://evetalk.ai/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Penny</h3>
+                    <p>虚拟助手和聊天机器人，适用于各种应用场景。</p>
+                    <a href="https://www.penny.io/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Mitsuku</h3>
+                    <p>一个友好的聊天机器人，擅长闲聊和互动。</p>
+                    <a href="http://mitsuku.com/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Tay</h3>
+                    <p>微软的社交聊天机器人（已停用），曾因不当言论引起争议。</p>
+                    <a href="https://tay.microsoft.com/en-us/conversation/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Kikichat</h3>
+                    <p>人工智能聊天机器人解决方案，适用于企业和组织。</p>
+                    <a href="https://kikichat.com/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Jasper Chat</h3>
+                    <p>高级聊天机器人平台，支持多种功能和集成。</p>
+                    <a href="https://jasper.ai/chat" target="_blank"><button>了解更多</button></a>
+                </div>
+            </section>
+
+            <section id="data-processing-tools" class="tools-list">
+                <h2>数据处理工具</h2>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Apache Spark</h3>
+                    <p>大规模数据处理引擎，支持批处理、流处理和机器学习。</p>
+                    <a href="https://spark.apache.org/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Pandas</h3>
+                    <p>Python数据分析库，提供高性能的数据结构和数据分析工具。</p>
+                    <a href="https://pandas.pydata.org/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>SQLAlchemy</h3>
+                    <p>Python SQL工具包，简化数据库操作和ORM映射。</p>
+                    <a href="https://www.sqlalchemy.org/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Dask</h3>
+                    <p>并行计算库，支持大规模数据集上的灵活计算。</p>
+                    <a href="https://dask.org/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>DataFrames.jl</h3>
+                    <p>Julia的数据框库，提供高效的数据操作和分析功能。</p>
+                    <a href="https://juliadata.github.io/DataFrames.jl/stable/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>R Data Science</h3>
+                    <p>R编程语言的数据科学书籍，涵盖统计学和可视化。</p>
+                    <a href="https://r4ds.had.co.nz/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Tableau Prep</h3>
+                    <p>数据准备工具，支持数据清洗、转换和连接。</p>
+                    <a href="https://www.tableau.com/products/prep" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Alteryx Designer</h3>
+                    <p>自动化分析平台，支持数据连接、清理和分析。</p>
+                    <a href="https://www.alteryx.com/solutions/designer" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Trifacta Wrangler</h3>
+                    <p>交互式数据清理工具，支持拖放式数据操作。</p>
+                    <a href="https://www.trifacta.com/trifacta-wrangler/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>OpenRefine</h3>
+                    <p>开源数据清洗工具，支持批量编辑和数据质量改进。</p>
+                    <a href="https://openrefine.org/" target="_blank"><button>了解更多</button></a>
+                </div>
+            </section>
+
+            <section id="machine-learning-frameworks" class="tools-list">
+                <h2>机器学习框架</h2>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>TensorFlow</h3>
+                    <p>Google的机器学习框架，广泛应用于深度学习和神经网络。</p>
+                    <a href="https://www.tensorflow.org/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>PyTorch</h3>
+                    <p>Facebook的深度学习框架，提供动态计算图和灵活性。</p>
+                    <a href="https://pytorch.org/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Scikit-learn</h3>
+                    <p>简单高效的Python机器学习库，适合初学者和专家。</p>
+                    <a href="https://scikit-learn.org/stable/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Keras</h3>
+                    <p>高层次神经网络API，易于使用且功能强大。</p>
+                    <a href="https://keras.io/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Caffe</h3>
+                    <p>Berkley的卷积神经网络框架，专注于视觉识别。</p>
+                    <a href="https://caffe.berkeleyvision.org/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>MXNet</h3>
+                    <p>轻量级、高效、灵活的深度学习框架，支持多种编程语言。</p>
+                    <a href="https://mxnet.apache.org/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Microsoft Cognitive Toolkit</h3>
+                    <p>用于构建复杂的深层神经网络，支持分布式训练。</p>
+                    <a href="https://www.microsoft.com/en-us/research/project/cognitive-toolkit/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>H2O.ai</h3>
+                    <p>自动机器学习平台，提供快速部署和可扩展性。</p>
+                    <a href="https://www.h2o.ai/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>LightGBM</h3>
+                    <p>梯度提升框架，专为大数据集设计，速度快且准确。</p>
+                    <a href="https://lightgbm.readthedocs.io/en/latest/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>XGBoost</h3>
+                    <p>优化的分布式梯度提升库，广泛应用于竞赛和生产环境。</p>
+                    <a href="https://xgboost.readthedocs.io/en/stable/" target="_blank"><button>了解更多</button></a>
+                </div>
+            </section>
+
+            <section id="natural-language-processing" class="tools-list">
+                <h2>自然语言处理</h2>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>spaCy</h3>
+                    <p>先进的NLP库，支持实体识别、依存句法分析等。</p>
+                    <a href="https://spacy.io/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>NLTK</h3>
+                    <p>领先的Python自然语言处理库，包含丰富的资源和工具。</p>
+                    <a href="https://www.nltk.org/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Stanford NLP Group</h3>
+                    <p>斯坦福大学的NLP研究小组，提供多种工具和资源。</p>
+                    <a href="https://nlp.stanford.edu/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>CoreNLP</h3>
+                    <p>斯坦福核心NLP套件，支持多种语言和任务。</p>
+                    <a href="https://stanfordnlp.github.io/CoreNLP/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Transformers by Hugging Face</h3>
+                    <p>最先进的NLP模型库，支持预训练和微调。</p>
+                    <a href="https://huggingface.co/transformers/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>AllenNLP</h3>
+                    <p>强大的NLP研究框架，支持自定义模型和实验。</p>
+                    <a href="https://allennlp.org/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>TextBlob</h3>
+                    <p>简单易用的NLP库，支持情感分析和文本处理。</p>
+                    <a href="https://textblob.readthedocs.io/en/dev/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>FastText</h3>
+                    <p>快速学习词向量的库，支持监督和非监督学习。</p>
+                    <a href="https://fasttext.cc/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Gensim</h3>
+                    <p>主题建模和文档相似性分析库，支持Word2Vec和Doc2Vec。</p>
+                    <a href="https://radimrehurek.com/gensim/" target="_blank"><button>了解更多</button></a>
+                </div>
+                <div class="tool-card">
+                    <img src="https://via.placeholder.com/60" alt="Tool Icon">
+                    <h3>Polyglot</h3>
+                    <p>多语言文本处理库，支持语言检测、命名实体识别等。</p>
+                    <a href="https://polyglot.readthedocs.io/en/latest/" target="_blank"><button>了解更多</button></a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 AIFinderHub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
