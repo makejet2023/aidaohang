@@ -1,391 +1,230 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI工具导航</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <title>the Best AI Tools Directory</title>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
         }
-
-        .tool-card {
-            transition: transform 0.3s ease-in-out;
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
         }
-
-        .tool-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+        }
+        nav a {
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #2980b9;
+        }
+        .container {
+            padding: 2rem;
+        }
+        h2 {
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: white;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        li a {
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+        }
+        li a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-
-<body class="bg-gray-100">
-    <!-- 导航栏 -->
-    <nav class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-800">AI工具导航</h1>
-            <input type="text" placeholder="搜索AI工具"
-                class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-        </div>
+<body>
+    <header>
+        <h1>AI Tools Directory</h1>
+    </header>
+    <nav>
+        <a href="#general-assistants">General Assistants & Chatbots</a>
+        <a href="#writing-tools">Writing Tools</a>
+        <a href="#image-generation">Image Generation</a>
+        <a href="#video-generation">Video Generation & Editing</a>
+        <a href="#coding-assistants">Coding Assistants</a>
+        <a href="#marketing-tools">Marketing Tools</a>
+        <a href="#productivity-tools">Productivity Tools</a>
+        <a href="#audio-processing">Audio Processing</a>
+        <a href="#search-engines">Search Engines & Knowledge Bases</a>
+        <a href="#other-tools">Other Useful Tools</a>
     </nav>
-    <!-- 主内容 -->
-    <div class="container mx-auto px-4 py-8">
-        <!-- 通用AI助手与聊天机器人 -->
-        <h2 class="text-xl font-bold text-gray-800 mb-4">通用AI助手与聊天机器人</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">OpenAI ChatGPT</h3>
-                <p class="text-gray-600">非常流行的通用聊天机器人。</p>
-                <a href="https://chat.openai.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：100</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Google Gemini</h3>
-                <p class="text-gray-600">谷歌的最新一代AI模型。</p>
-                <a href="https://gemini.google.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：80</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Microsoft Copilot</h3>
-                <p class="text-gray-600">集成在微软产品中的AI助手。</p>
-                <a href="https://copilot.microsoft.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：90</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Claude AI (Anthropic)</h3>
-                <p class="text-gray-600">注重安全和负责任的AI助手。</p>
-                <a href="https://claude.ai" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：70</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Perplexity AI</h3>
-                <p class="text-gray-600">提供带来源引用的AI搜索引擎。</p>
-                <a href="https://perplexity.ai" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：60</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Character AI</h3>
-                <p class="text-gray-600">可以创建和与各种AI角色互动。</p>
-                <a href="https://character.ai" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：50</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">ChatSonic (Writesonic)</h3>
-                <p class="text-gray-600">专注于内容生成的AI聊天机器人。</p>
-                <a href="https://writesonic.com/chatsonic" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：40</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Le Chat (Mistral AI)</h3>
-                <p class="text-gray-600">Mistral AI提供的聊天机器人。</p>
-                <a href="https://mistral.ai/le-chat" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：30</span>
-            </div>
-        </div>
-        <!-- AI写作工具 -->
-        <h2 class="text-xl font-bold text-gray-800 mt-8 mb-4">AI写作工具</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Jasper</h3>
-                <p class="text-gray-600">强大的AI写作助手，适用于营销内容。</p>
-                <a href="https://jasper.ai" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：120</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Rytr</h3>
-                <p class="text-gray-600">快速且经济实惠的AI写作工具。</p>
-                <a href="https://rytr.me" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：110</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Copy.ai</h3>
-                <p class="text-gray-600">帮助您生成各种营销文案。</p>
-                <a href="https://copy.ai" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：105</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Surfer SEO</h3>
-                <p class="text-gray-600">提供AI写作和SEO优化功能。</p>
-                <a href="https://surferseo.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：95</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Scalenut</h3>
-                <p class="text-gray-600">AI内容生成和SEO工具。</p>
-                <a href="https://scalenut.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：92</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Wordtune</h3>
-                <p class="text-gray-600">AI写作助手，帮助您改进文本。</p>
-                <a href="https://wordtune.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：88</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Grammarly</h3>
-                <p class="text-gray-600">虽然主要是一个语法检查器，但也集成了AI写作辅助功能。</p>
-                <a href="https://grammarly.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：85</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Paperpal</h3>
-                <p class="text-gray-600">专门为学术写作设计的AI工具。</p>
-                <a href="https://paperpal.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：82</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">QuillBot</h3>
-                <p class="text-gray-600">提供释义、语法检查和总结等功能。</p>
-                <a href="https://quillbot.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：78</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">INK Editor</h3>
-                <p class="text-gray-600">AI写作助手，专注于SEO优化。</p>
-                <a href="https://inkforall.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：75</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Lex AI</h3>
-                <p class="text-gray-600">帮助您进行写作和思考的AI工具。</p>
-                <a href="https://lex.page" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：72</span>
-            </div>
-        </div>
-        <!-- AI图像生成工具 -->
-        <h2 class="text-xl font-bold text-gray-800 mt-8 mb-4">AI图像生成工具</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">DALL - E 3 (OpenAI)</h3>
-                <p class="text-gray-600">从文本描述生成图像。</p>
-                <a href="https://openai.com/dall-e-3" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：130</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Midjourney</h3>
-                <p class="text-gray-600">通过Discord界面生成高质量图像。</p>
-                <a href="https://midjourney.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：125</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Stable Diffusion</h3>
-                <p class="text-gray-600">开源的图像生成模型，有多个在线平台。</p>
-                <a href="https://stablediffusion.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：122</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Leonardo AI</h3>
-                <p class="text-gray-600">提供多种AI模型和工具来生成图像。</p>
-                <a href="https://leonardo.ai" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：118</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Adobe Firefly</h3>
-                <p class="text-gray-600">集成在Adobe Creative Cloud中的AI图像生成工具。</p>
-                <a href="https://firefly.adobe.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：115</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Canva AI (Magic Design)</h3>
-                <p class="text-gray-600">在Canva中使用AI生成设计和图像。</p>
-                <a href="https://canva.com/magic-design" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：112</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Bing Image Creator (DALL - E集成)</h3>
-                <p class="text-gray-600">微软Bing提供的免费图像生成器。</p>
-                <a href="https://bing.com/create" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：108</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">DreamStudio (Stability AI)</h3>
-                <p class="text-gray-600">基于Stable Diffusion的图像生成平台。</p>
-                <a href="https://dreamstudio.ai" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：105</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Nightcafe Creator</h3>
-                <p class="text-gray-600">提供多种AI艺术生成工具。</p>
-                <a href="https://nightcafe.studio" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：102</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Fotor AI Image Generator</h3>
-                <p class="text-gray-600">在线AI图像生成器。</p>
-                <a href="https://fotor.com/features/ai-image-generator/" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：98</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Artbreeder</h3>
-                <p class="text-gray-600">可以混合和变异图像。</p>
-                <a href="https://artbreeder.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：95</span>
-            </div>
-        </div>
-        <!-- AI视频生成和编辑工具 -->
-        <h2 class="text-xl font-bold text-gray-800 mt-8 mb-4">AI视频生成和编辑工具</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">RunwayML</h3>
-                <p class="text-gray-600">提供多种AI视频编辑和生成工具。</p>
-                <a href="https://runwayml.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：140</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Pictory.ai</h3>
-                <p class="text-gray-600">将文本内容转换为视频。</p>
-                <a href="https://pictory.ai" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：135</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Synthesia.io</h3>
-                <p class="text-gray-600">使用AI生成逼真的虚拟人物视频。</p>
-                <a href="https://synthesia.io" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：132</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Descript</h3>
-                <p class="text-gray-600">音视频编辑工具，集成了AI功能。</p>
-                <a href="https://descript.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：128</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">VEED.IO</h3>
-                <p class="text-gray-600">在线视频编辑工具，提供AI功能。</p>
-                <a href="https://veed.io" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：125</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">InVideo</h3>
-                <p class="text-gray-600">在线视频制作平台，提供AI辅助功能。</p>
-                <a href="https://invideo.io" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：122</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Lumen5</h3>
-                <p class="text-gray-600">将博客文章转换为视频。</p>
-                <a href="https://lumen5.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：118</span>
-            </div>
-        </div>
-        <!-- AI编码助手 -->
-        <h2 class="text-xl font-bold text-gray-800 mt-8 mb-4">AI编码助手</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">GitHub Copilot</h3>
-                <p class="text-gray-600">AI配对程序员。</p>
-                <a href="https://github.com/features/copilot" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：150</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Tabnine</h3>
-                <p class="text-gray-600">AI代码自动完成工具。</p>
-                <a href="https://tabnine.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：145</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Codeium</h3>
-                <p class="text-gray-600">免费的AI代码完成和聊天工具。</p>
-                <a href="https://codeium.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：142</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Amazon CodeWhisperer</h3>
-                <p class="text-gray-600">AWS提供的AI编码助手。</p>
-                <a href="https://aws.amazon.com/codewhisperer/" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：138</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Replit</h3>
-                <p class="text-gray-600">在线代码编辑器，集成了AI功能。</p>
-                <a href="https://replit.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：135</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Sourcegraph Cody</h3>
-                <p class="text-gray-600">AI编码助手，提供代码解释和生成。</p>
-                <a href="https://sourcegraph.com/cody" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：132</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">DeepCode AI</h3>
-                <p class="text-gray-600">使用AI进行代码分析和安全检查。</p>
-                <a href="https://deepcode.ai" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：128</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">AskCodi</h3>
-                <p class="text-gray-600">AI驱动的代码问答助手。</p>
-                <a href="https://askcodi.com" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：125</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Codiga</h3>
-                <p class="text-gray-600">提供代码审查和自动修复建议。</p>
-                <a href="https://codiga.io" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：122</span>
-            </div>
-        </div>
-        <!-- AI营销工具 -->
-        <h2 class="text-xl font-bold text-gray-800 mt-8 mb-4">AI营销工具</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">HubSpot AI Tools</h3>
-                <p class="text-gray-600">HubSpot提供的AI营销工具集。</p>
-                <a href="https://hubspot.com/artificial-intelligence" target="_blank"
-                    class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">访问</a>
-                <span class="ml-3 text-gray-500">实时点击量：160</span>
-            </div>
-            <div class="tool-card bg-white p-4 rounded-md shadow-md">
-                <h3 class="text-lg font-bold text-gray-800">Buffer AI Assistant</h3>
-                
+    <div class="container">
+        <section id="general-assistants">
+            <h2>General Assistants & Chatbots</h2>
+            <ul>
+                <li><a href="https://chat.openai.com" target="_blank">OpenAI ChatGPT</a> - Very popular general chatbot.</li>
+                <li><a href="https://gemini.google.com" target="_blank">Google Gemini</a> - Google's latest generation AI model.</li>
+                <li><a href="https://copilot.microsoft.com" target="_blank">Microsoft Copilot</a> - Integrated AI assistant in Microsoft products.</li>
+                <li><a href="https://claude.ai" target="_blank">Claude AI (Anthropic)</a> - Focused on safety and responsible AI assistance.</li>
+                <li><a href="https://perplexity.ai" target="_blank">Perplexity AI</a> - Provides an AI search engine with source references.</li>
+                <li><a href="https://character.ai" target="_blank">Character AI</a> - Create and interact with various AI characters.</li>
+                <li><a href="https://writesonic.com/chatsonic" target="_blank">ChatSonic (Writesonic)</a> - Content generation focused AI chatbot.</li>
+                <li><a href="https://mistral.ai/le-chat" target="_blank">Le Chat (Mistral AI)</a> - Chatbot provided by Mistral AI.</li>
+            </ul>
+        </section>
+        <section id="writing-tools">
+            <h2>Writing Tools</h2>
+            <ul>
+                <li><a href="https://jasper.ai" target="_blank">Jasper</a> - Powerful AI writing assistant for marketing content.</li>
+                <li><a href="https://rytr.me" target="_blank">Rytr</a> - Fast and affordable AI writing tool.</li>
+                <li><a href="https://copy.ai" target="_blank">Copy.ai</a> - Generates various marketing copy.</li>
+                <li><a href="https://surferseo.com" target="_blank">Surfer SEO</a> - Offers AI writing and SEO optimization features.</li>
+                <li><a href="https://scalenut.com" target="_blank">Scalenut</a> - AI content generation and SEO tool.</li>
+                <li><a href="https://wordtune.com" target="_blank">Wordtune</a> - AI writing assistant to improve your text.</li>
+                <li><a href="https://grammarly.com" target="_blank">Grammarly</a> - Primarily a grammar checker but includes AI writing aids.</li>
+                <li><a href="https://paperpal.com" target="_blank">Paperpal</a> - AI tool specifically designed for academic writing.</li>
+                <li><a href="https://quillbot.com" target="_blank">QuillBot</a> - Provides paraphrasing, grammar checking, and summarization functions.</li>
+                <li><a href="https://inkforall.com" target="_blank">INK Editor</a> - AI writing assistant focusing on SEO optimization.</li>
+                <li><a href="https://lex.page" target="_blank">Lex AI</a> - Helps you write and think using AI tools.</li>
+            </ul>
+        </section>
+        <section id="image-generation">
+            <h2>Image Generation</h2>
+            <ul>
+                <li><a href="https://openai.com/dall-e-3" target="_blank">DALL-E 3 (OpenAI)</a> - Generate images from text descriptions.</li>
+                <li><a href="https://midjourney.com" target="_blank">Midjourney</a> - High-quality image generator via Discord interface.</li>
+                <li><a href="https://stablediffusion.com" target="_blank">Stable Diffusion</a> - Open-source image generation model with multiple online platforms.</li>
+                <li><a href="https://leonardo.ai" target="_blank">Leonardo AI</a> - Provides various AI models and tools to generate images.</li>
+                <li><a href="https://firefly.adobe.com" target="_blank">Adobe Firefly</a> - AI image generation tool integrated into Adobe Creative Cloud.</li>
+                <li><a href="https://canva.com/magic-design" target="_blank">Canva AI (Magic Design)</a> - Use AI to generate designs and images in Canva.</li>
+                <li><a href="https://bing.com/create" target="_blank">Bing Image Creator (DALL-E integration)</a> - Free image generator provided by Microsoft Bing.</li>
+                <li><a href="https://dreamstudio.ai" target="_blank">DreamStudio (Stability AI)</a> - Based on Stable Diffusion image generation platform.</li>
+                <li><a href="https://nightcafe.studio" target="_blank">Nightcafe Creator</a> - Provides various AI art generation tools.</li>
+                <li><a href="https://fotor.com/features/ai-image-generator/" target="_blank">Fotor AI Image Generator</a> - Online AI image generator.</li>
+                <li><a href="https://artbreeder.com" target="_blank">Artbreeder</a> - Mix and mutate images.</li>
+            </ul>
+        </section>
+        <section id="video-generation">
+            <h2>Video Generation & Editing</h2>
+            <ul>
+                <li><a href="https://runwayml.com" target="_blank">RunwayML</a> - Multiple AI video editing and generation tools.</li>
+                <li><a href="https://pictory.ai" target="_blank">Pictory.ai</a> - Converts text content into videos.</li>
+                <li><a href="https://synthesia.io" target="_blank">Synthesia.io</a> - Uses AI to create realistic virtual character videos.</li>
+                <li><a href="https://descript.com" target="_blank">Descript</a> - Audio/video editing tool with AI functionality.</li>
+                <li><a href="https://veed.io" target="_blank">VEED.IO</a> - Online video editing tool with AI capabilities.</li>
+                <li><a href="https://invideo.io" target="_blank">InVideo</a> - Online video creation platform with AI assistance.</li>
+                <li><a href="https://lumen5.com" target="_blank">Lumen5</a> - Converts blog articles into videos.</li>
+            </ul>
+        </section>
+        <section id="coding-assistants">
+            <h2>Coding Assistants</h2>
+            <ul>
+                <li><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a> - AI pair programmer.</li>
+                <li><a href="https://tabnine.com" target="_blank">Tabnine</a> - AI code autocompletion tool.</li>
+                <li><a href="https://codeium.com" target="_blank">Codeium</a> - Free AI code completion and chat tool.</li>
+                <li><a href="https://aws.amazon.com/codewhisperer/" target="_blank">Amazon CodeWhisperer</a> - AI coding assistant from AWS.</li>
+                <li><a href="https://replit.com" target="_blank">Replit</a> - Online code editor with AI functionalities.</li>
+                <li><a href="https://sourcegraph.com/cody" target="_blank">Sourcegraph Cody</a> - AI coding assistant providing code explanation and generation.</li>
+                <li><a href="https://deepcode.ai" target="_blank">DeepCode AI</a> - Uses AI for code analysis and security checks.</li>
+                <li><a href="https://askcodi.com" target="_blank">AskCodi</a> - AI-driven code question answering assistant.</li>
+                <li><a href="https://codiga.io" target="_blank">Codiga</a> - Provides code review and automatic fix suggestions.</li>
+            </ul>
+        </section>
+        <section id="marketing-tools">
+            <h2>Marketing Tools</h2>
+            <ul>
+                <li><a href="https://hubspot.com/artificial-intelligence" target="_blank">HubSpot AI Tools</a> - HubSpot's AI marketing toolset.</li>
+                <li><a href="https://buffer.com/resources/ai-marketing-tools/" target="_blank">Buffer AI Assistant</a> - AI assistant to help create social media content.</li>
+                <li><a href="https://predis.ai" target="_blank">Predis.ai</a> - Creates ad creatives.</li>
+                <li><a href="https://smartly.io" target="_blank">Smartly.io</a> - Automates ad placements with AI.</li>
+                <li><a href="https://phrasee.co" target="_blank">Phrasee</a> - Generates brand-specific marketing copy using AI.</li>
+            </ul>
+        </section>
+        <section id="productivity-tools">
+            <h2>Productivity Tools</h2>
+            <ul>
+                <li><a href="https://notion.so/product/ai" target="_blank">Notion AI</a> - AI assistant integrated into Notion for writing and summarizing.</li>
+                <li><a href="https://otter.ai" target="_blank">Otter.ai</a> - AI voice transcription and meeting notes tool.</li>
+                <li><a href="https://fireflies.ai" target="_blank">Fireflies.ai</a> - AI meeting assistant that records, transcribes, and summarizes meetings.</li>
+                <li><a href="https://mem.ai" target="_blank">Mem.ai</a> - AI-driven knowledge management tool.</li>
+                <li><a href="https://sembly.ai" target="_blank">Sembly AI</a> - Another AI meeting assistant.</li>
+                <li><a href="https://taskade.com/ai" target="_blank">Taskade AI</a> - AI assistant integrated into Taskade for task management and collaboration.</li>
+                <li><a href="https://microsoft.com/en-us/microsoft-365/loop" target="_blank">Microsoft Loop</a> - Collaboration platform with AI functionalities.</li>
+                <li><a href="https://trello.com" target="_blank">Trello (via Power-Ups integrate AI)</a> - Project management tool with plugin integrations for AI.</li>
+                <li><a href="https://asana.com" target="_blank">Asana (integrate AI feature)</a> - Project management tool with AI assistants.</li>
+            </ul>
+        </section>
+        <section id="audio-processing">
+            <h2>Audio Processing</h2>
+            <ul>
+                <li><a href="https://elevenlabs.io" target="_blank">ElevenLabs</a> - AI voice synthesis and dubbing tool.</li>
+                <li><a href="https://resemble.ai" target="_blank">Resemble AI</a> - AI voice cloning and generation tool.</li>
+                <li><a href="https://krisp.ai" target="_blank">Krisp</a> - AI-powered noise cancellation tool.</li>
+                <li><a href="https://lalal.ai" target="_blank">Lalal.ai</a> - AI audio segmentation tool extracting vocals and instruments.</li>
+                <li><a href="https://podcastle.ai" target="_blank">Podcastle</a> - AI-driven podcast recording and editing tool.</li>
+                <li><a href="https://suno.ai" target="_blank">Suno AI</a> - AI music generator.</li>
+                <li><a href="https://udio.com" target="_blank">Udio</a> - Another AI music generation platform.</li>
+            </ul>
+        </section>
+        <section id="search-engines">
+            <h2>Search Engines & Knowledge Bases</h2>
+            <ul>
+                <li><a href="https://you.com" target="_blank">You.com</a> - Privacy-focused AI-driven search engine.</li>
+                <li><a href="https://neeva.com" target="_blank">Neeva</a> - Acquired by Snowflake, possibly no longer as independent search engine.</li>
+                <li><a href="https://kagi.com" target="_blank">Kagi</a> - Paywalled search engine emphasizing quality and user privacy.</li>
+                <li><a href="https://wolframalpha.com" target="_blank">WolframAlpha</a> - Computational knowledge engine.</li>
+            </ul>
+        </section>
+        <section id="other-tools">
+            <h2>Other Useful Tools</h2>
+            <ul>
+                <li><a href="https://deepl.com/translator" target="_blank">DeepL Translate</a> - High-quality AI translation tool.</li>
+                <li><a href="https://translate.google.com" target="_blank">Google Translate</a> - Popular free translation tool.</li>
+                <li><a href="https://pimeyes.com" target="_blank">PimEyes</a> - AI-based facial recognition search engine.</li>
+                <li><a href="https://remove.bg" target="_blank">Remove.bg</a> - AI-driven picture background removal tool.</li>
+                <li><a href="https://letsenhance.io" target="_blank">Let's Enhance.io</a> - AI picture enhancement tool.</li>
+                <li><a href="https://interiorai.com" target="_blank">Interior AI</a> - Redesigns indoor spaces using AI.</li>
+                <li><a href="https://tome.app" target="_blank">Tome AI</a> - AI-driven storytelling and presentation tool.</li>
+                <li><a href="https://gamma.app" target="_blank">Gamma.app</a> - AI-driven presentation and document creation tool.</li>
+                <li><a href="https://surreal.video" target="_blank">Surreal</a> - AI-driven avatar generation platform.</li>
+                <li><a href="https://runwayml.com" target="_blank">RunwayML Gen-1 & Gen-2</a> - AI text-to-video and image-to-video tools.</li>
+                <li><a href="https://openai.com/sora" target="_blank">Sora (OpenAI - not widely used yet)</a> - AI text-to-video generation model.</li>
+                <li><a href="https://pika.art" target="_blank">Pika Labs</a> - AI video generation platform.</li>
+                <li><a href="https://recraft.ai" target="_blank">Recraft.ai</a> - AI vector art generator.</li>
+                <li><a href="https://diagramgpt.com" target="_blank">DiagramGPT</a> - Generates diagrams from text.</li>
+                <li><a href="https://browse.ai" target="_blank">Browse AI</a> - Extracts and monitors data from any website.</li>
+                <li><a href="https://bardeen.ai" target="_blank">Bardeen AI</a> - Automates workflows with AI.</li>
+                <li><a href="https://zapier.com/features/ai-actions" target="_blank">Zapier AI Actions</a> - Uses AI within Zapier workflows.</li>
+                <li><a href="https://ifttt.com" target="_blank">IFTTT (integrating AI services)</a> - Automation platform connecting different apps/services with AI functionalities.</li>
+                <li><a href="https://otter.ai/otterpilot" target="_blank">OtterPilot (Otter.ai feature)</a> - Automatically joins meetings and takes notes.</li>
+                <li><a href="https://fireflies.ai/features/meeting-summaries" target="_blank">Fireflies.ai Meeting Summaries</a> - Auto-generates meeting summaries.</li>
+                <li><a href="https://pictory.ai/features/summarizer" target="_blank">Pictory AI Summarizer</a> - Summarizes long-form content.</li>
+                <li><a href="https://assemblyai.com" target="_blank">AssemblyAI</a> - Provides various AI audio smart APIs.</li>
+                <li><a href="https://rev.ai" target="_blank">Rev AI</a> - Offers speech transcription and captioning services.</li>
+                <li><a href="https://happyscribe.com" target="_blank">Happy Scribe</a> - Provides speech transcription and captioning services.</li>
+                <li><a href="https://unscreen.com" target="_blank">Unscreen</a> - Removes video backgrounds automatically.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
+
+
+
